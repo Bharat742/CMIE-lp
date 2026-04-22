@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features Banner</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Banner Background */
+        .features-banner {
+            background-color: #008cd1; /* Matches the bright blue in the image */
+            color: #ffffff;
+            padding: 20px 0;
+        }
+
+        /* Feature Item Layout */
+        .feature-item {
+            display: flex;
+            align-items: center;
+            max-width: 250px; /* Keeps text from stretching too far */
+            margin: 10px 15px;
+        }
+
+        /* Icon Styling */
+        .feature-icon {
+            font-size: 2.2rem;
+            margin-right: 15px;
+            opacity: 0.9;
+        }
+
+        /* Warranty Icon specific styling to mimic the red ribbon badge */
+        .warranty-icon-container {
+            position: relative;
+            display: inline-block;
+            margin-right: 15px;
+        }
+        
+        .warranty-icon-container i {
+            font-size: 2.2rem;
+            color: #fff;
+        }
+
+        .warranty-icon-container .badge-ribbon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #e31837; /* Red ribbon */
+            font-size: 0.4rem;
+            padding: 2px 4px;
+            font-weight: bold;
+            border-radius: 2px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Text Styling */
+        .feature-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+
+        .feature-subtext {
+            font-size: 0.7rem;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 991px) {
+            .feature-item {
+                max-width: 100%;
+                width: 45%; /* Shows 2 items per row on tablet */
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .feature-item {
+                width: 100%; /* Stacks items on mobile */
+                justify-content: flex-start;
+                padding-left: 10%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="features-banner">
+        <div class="container-fluid px-lg-5">
+            <div class="d-flex flex-wrap justify-content-center justify-content-xl-between align-items-center">
+                
+                <div class="feature-item">
+                    <i class="fa-solid fa-truck-fast feature-icon"></i>
+                    <div>
+                        <p class="feature-title">FREE DELIVERY</p>
+                        <p class="feature-subtext">Order, delivered free. It's that simple</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fa-solid fa-box-open feature-icon"></i>
+                    <div>
+                        <p class="feature-title">EASY RETURNS*</p>
+                        <p class="feature-subtext">Shop Confidently with Easy Returns</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fa-solid fa-calculator feature-icon"></i>
+                    <div>
+                        <p class="feature-title">NO COST EMI</p>
+                        <p class="feature-subtext">Necessity is the mother of invention</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fa-regular fa-handshake feature-icon"></i>
+                    <div>
+                        <p class="feature-title">CORPORATE DISCOUNT</p>
+                        <p class="feature-subtext">₹1,000 instant discount*</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="warranty-icon-container">
+                        <i class="fa-solid fa-certificate"></i>
+                        <span class="badge-ribbon">WARRANTY</span>
+                    </div>
+                    <div>
+                        <p class="feature-title">EXTENDED WARRANTY</p>
+                        <p class="feature-subtext">Valued ₹1,500*</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

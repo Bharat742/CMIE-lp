@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          body { font-family: "Poppins", sans-serif; }
+        section{padding-top: 60px; padding-bottom: 60px;}
+        header .logo .main-logo{width: 160px; height: auto;}
+        header .account-link a{font-size: 12px; font-weight: 500; display: flex; align-items: center; gap: 10px; justify-content: center;}
+        .custom-cart-badge { background-color: #f1b700 !important; color: #ffffff !important; border-radius: 1px !important; padding: 2px 4px; font-size: 10px; font-weight: bold;}
+        /* Top Banner */
+        .top-banner { background-color: #F2F2F2; color: #17469E; font-size: 9px; font-weight: bold; padding: 3px 0;}
+        /* Navbar Links */
+        .nav-main {   background: linear-gradient(90deg, #27A8E0 0%, #2D3691 100%);}
+        .nav-main a { color: white; text-decoration: none; padding: 10px 15px; display: inline-block; font-size: 11px; font-weight: 300;}
+        .nav-main a:hover { background-color: rgba(255,255,255,0.1);}
+        .nav-right-actions {background-color: #27A8E0; display: flex; padding-left: 20px; padding-right: 20px;}
+        /* Overall Container */
+.header-search-section {display: flex;align-items: center; gap: 15px; }
+/* --- Location Dropdown --- */
+.header-search-section .location-dropdown {display: flex;align-items: center;color: #000;font-size: 14px;position: relative;}
+.header-search-section .location-dropdown img{ margin-right: 5px; width: 13px;}
+.header-search-section .location-select { border: none; outline: none; background: transparent; color: #777; font-size: 12px; cursor: pointer;  -webkit-appearance: none; -moz-appearance: none; appearance: none; padding-right: 12px; }
+/* Custom minimal dropdown arrow */
+.header-search-section .location-dropdown::after { content: '\25BE';  position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 17px; pointer-events: none; color: #333;}
+/* --- Search Bar Container (Pill Shape) --- */
+.header-search-section  .search-bar-container { border: 1px solid #D9D9D9;  border-radius: 25px;  display: flex; align-items: center; width: 400px; max-width: 500px; background-color: #fff;  height: 35px; }
+.header-search-section  .search-bar-container input { border: none; outline: none; padding: 10px 20px; flex-grow: 1; font-size: 10px; color: #333; background: transparent;}
+.header-search-section  .search-bar-container input::placeholder { color: #a1a1aa; /* Lighter placeholder text */}
+/* Vertical Line Separator */
+.header-search-section .separator { width: 1px; height: 25px;   background-color: #D9D9D9;}
+/* Search Button */
+.header-search-section .search-btn { background: none; border: none; padding: 0 10px; cursor: pointer; color: #d1d5db;   font-size: 16px; display: flex; align-items: center; justify-content: center;}
+.header-search-section .search-btn:hover { color: #9ca3af;}
+        /* Sticky Header Bar */
+.sticky-prod-header { background-color: #EBEBEB;  padding: 15px 0; }
+        .sticky-prod-header .btn-small{font-size: 9px; font-weight: 400; padding: 4px 3px; background-color: #2A5FB0; color: #fff; width: 90px;}
+        .sticky-prod-header .add-text{font-size: 15px; font-weight: 500; padding-right: 100px;}
+        .sticky-prod-header .add-text p{margin-bottom: unset;}
+        .sticky-prod-header .add-text span{font-size: 9px; font-weight: 300;}
+        .sticky-prod-header .price-content .price{font-size: 15px; font-weight: 700; color: #2A5FB0; }
+        .sticky-prod-header .price-content .mrp{font-size: 9px; font-weight: 400; }
+        .sticky-prod-header .price-content .cut-price{font-size: 16px; font-weight: 400; color: #8E8E8E;}
+        .sticky-prod-header .price-content .save-price{font-size: 15px; font-weight: 500; color: #000;}
+        .sticky-prod-header .price-content{line-height: 1;}
+        .sticky-prod-header .emi-line{font-size: 9px; font-weight: 400; color: #000;}
+    </style>
+</head>
+<body>
+     <!-- =========================== Navbar ================================ -->
+     
+
+    <div class="top-banner text-center">
+        Now delivering to more locations - check your Pincode and shop with ease!
+    </div>
+
+    <header class="container py-3 d-flex align-items-center justify-content-between">
+        <div class="logo">
+            <img class="main-logo" src="./images/main-logo.png" alt="Carrier Logo"  >
+        </div>
+        
+        <!-- <div class="search-bar-container d-none d-md-flex">
+            <select>
+                <option><i class="fa-solid fa-location-dot"></i> Search your location</option>
+                <option><i class="fa-solid fa-location-dot"></i> Gurgaon</option>
+                <option><i class="fa-solid fa-location-dot"></i> Delhi</option>
+                <option><i class="fa-solid fa-location-dot"></i> Noida</option>
+            </select>
+            <input type="text" placeholder="Search your product...">
+            <button class="btn btn-link text-muted"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div> -->
+
+        <div class="header-search-section d-none d-md-flex">
+    
+    <div class="location-dropdown">
+        <!-- <i class="fa-solid fa-location-dot"></i> -->
+         <img src="./images/location icon.png" alt="location">
+        <select class="location-select">
+            <option>Delivering to</option>
+            <option>Gurgaon</option>
+            <option>Delhi</option>
+            <option>Noida</option>
+        </select>
+    </div>
+
+    <div class="search-bar-container">
+        <input type="text" placeholder="1101 Welldone Tech Park, sector 48, Sohna Road">
+        <div class="separator"></div>
+        <button class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+
+</div>
+
+        <div class="account-link">
+            <a href="#" class="text-dark text-decoration-none  ">My Account 
+                <!-- <i class="fa-regular fa-user"></i> -->
+                 <img src="./images/profile.png" alt="user">
+            </a>
+        </div>
+    </header>
+
+    <nav class="nav-main d-none d-lg-flex justify-content-evenly">
+        <div class="container d-lg-flex justify-content-between align-items-center">
+        <div class="nav-links ms-2">
+            <a href="#">Carrier Air Conditioners</a>
+            <a href="#">Midea Air Conditioners</a>
+            <a href="#">Carrier Stabilizer</a>
+            <a href="#">Support</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Videos</a>
+            <a href="#">Testimonials</a>
+        </div>
+        <div class="nav-right-actions ">
+            <a class="d-flex" href="#"> My Cart <div class="position-relative ms-2"><img src="./images/cart.svg" alt="cart"  > 
+            <span class="position-absolute top-0 start-100 translate-middle badge custom-cart-badge"> 3 </span></div></a>
+           
+        </div>
+         <a href="#">  My Wishlist <img class="ms-2" src="./images/heart.png" alt="wishlist"></a>
+         </div>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <style>
+        body {
+  background: #f3f3f3;
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* ══════════════════════════════
+     TOP HEADER
+  ══════════════════════════════ */
+.top-header {
+  background: #fff;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 10px 0px;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-section img {
+  height: 54px;
+  object-fit: contain;
+}
+.top_nav{background: #F2F2F2;}
+.top_nav p{color: #17469E;
+    font-size: 10px;font-weight: 500;
+    text-align: center;
+    padding: 4px;margin-bottom: 0;}
+.logo-section .menu{display: none;}
+.navbar{background: linear-gradient(90deg, #27A8E0 0%, #2D3691 100%);padding: 0 !important;}
+.navbar .nav-link{padding: 10px 16px !important;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    font-weight: 300;
+    color: #fff;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.navbar .nav-link.active, .navbar .nav-link:hover{background: #f0f4ff; color: #1a56db !important;}
+.navbar .navbar-nav{height: -webkit-fill-available;}
+.navbar .navbar-nav li{height: 100%; display: flex;}
+.navbar-toggler {
+    padding: 0px !important;
+    font-size: 17.5px !important;
+    line-height: 0 !important;
+    color: rgba(0, 0, 0, 0.65) !important;
+    background-color: transparent !important;
+    border: 0px solid rgba(0, 0, 0, 0.15) !important;
+    border-radius: 5.25px !important;
+    transition: box-shadow 0.15s ease-in-out !important
+}
+.navbar-toggler-icon{display: inline-block !important;
+    width: 1.5em !important;
+    height: 1.5em !important;
+    vertical-align: middle !important;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 100% !important;}
+.logo-divider {
+  width: 1px;
+  height: 34px;
+  background: #ccc;
+  flex-shrink: 0;
+}
+
+.search-wrap {
+  position: relative;
+  width: 355px;
+}
+
+.search-wrap input {
+  border: 1.5px solid #ddd;
+  border-radius: 20px;
+  padding: 7px 38px 7px 14px;
+  font-size: 9px;
+  width: 100%;
+  outline: none;
+  color: #D9D9D9;
+}
+.logo_search_flex{display: flex;align-items: center;gap: 80px;}
+
+.search-wrap button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.search-wrap button img {
+  width: 15px;
+  height: 15px;
+  opacity: 0.5;
+}
+
+.location-btn {
+  font-size: 11px;
+    color: #7C7C7C;
+    font-weight: 400;padding-right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.location-btn img {
+  width: 13px;
+  height: auto;
+}
+
+.my-account {
+  font-size: 12px;
+  font-weight: 400;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  white-space: nowrap;text-decoration: none;
+}
+
+.my-account img {
+  width: 10px;
+    height: auto;
+    margin-left: 10px;
+}
+
+/* ══════════════════════════════
+     MAIN NAV
+  ══════════════════════════════ */
+.main-nav {
+  background: linear-gradient(90deg, #27a8e0 0%, #2d3691 100%);
+  color: #fff;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.nav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-link-item {
+  padding: 10px 16px;
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  font-weight: 300;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background 0.15s,
+    color 0.15s;
+  /* border-right: 1px solid #f0f0f0; */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.nav-link-item:hover {
+  background: #f0f4ff;
+  color: #1a56db;
+}
+
+.nav-cart {
+  background: #0092d8;
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 13px 30px;
+  letter-spacing: 0.3px;
+  font-weight: 300;
+  font-size: 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
+  line-height: 10px;
+}
+
+.nav-cart img {
+  width: 18px;
+  height: auto;
+}
+
+.cart-badge {
+  background: #ff5722;
+  color: #fff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nav-wishlist {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 13px 16px;
+  font-weight: 300;
+  font-size: 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.nav-wishlist img {
+  width: 15px;
+  height: auto;
+  margin-left: 6px;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <div class="top_nav">
+        <p>Now delivering to more locations—check your Pincode and shop with ease!</p>
+    </div>
+    <div class="top-header">
+        <div class="container px-0">
+            <div class="d-flex align-items-center justify-content-between gap-2 gap-md-3">
+
+                <div class="logo_search_flex">
+                    <!-- Logos -->
+                    <div class="logo-section">
+                        <!-- <img src="public/menu.png" alt="img" class="img-fluid menu"> -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <!-- <span class="navbar-toggler-icon"></span> -->
+                             <img src="public/menu.png" alt="img" class="img-fluid menu">
+                        </button>
+                        <a href="#"><img src="public/logo.png" alt="Carrier"></a>
+
+
+                    </div>
+                    <div class="d-flex">
+                        <!-- Location -->
+                        <div class="location-btn">
+                            <img src="public/location.png" alt="location">
+                            Search your location ▾
+                        </div>
+
+
+                        <!-- Search -->
+                        <div class="search-wrap">
+                            <input type="text" placeholder="Search products...">
+                            <button><img src="public/search.png" alt="search"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My Account -->
+                <a href="#" class="my-account d-none d-lg-flex">
+                    <span>My Account</span>
+                    <img src="public/user.png" alt="account">
+                </a>
+                <ul class="user_details">
+                    <li>
+                        <div class="search">
+                            <a href="#"><img src="public/search_icon.png" alt="img" class="img-fluid"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="account">
+                            <a href="#"><img src="public/user_login.png" alt="img" class="img-fluid"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cart">
+                            <a href="#"><img src="public/cart_icon.png" alt="img" class="img-fluid"></a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <!--MAIN NAV-->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container"> 
+            <!--  -->
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">Carrier Air Conditioners</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Midea Air Conditioners</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Camipro Stabilizer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Testimonials</a>
+                    </li> 
+                </ul>
+                <div class="d-none d-lg-flex ms-auto">
+                    <div class="nav-cart">
+                        My Cart
+                        <!-- <div class="cart-badge">0</div> -->
+
+                        <img src="public/cart.png" alt="cart">
+                    </div>
+                    <div class="nav-wishlist">
+
+                        My Wishlist
+                        <img src="public/wishlist_m.png" alt="wishlist">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- <div class="main-nav">
+        <div class="container px-0">
+            <div class="col-lg-12">
+                <div class="nav-inner">
+
+                    <!-- Hamburger (mobile only) -->
+                    <!-- <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+                        <span></span><span></span><span></span>
+                    </button>
+
+                    <!-- Desktop links -->
+                     <!--<div class="desktop-nav-links d-flex align-items-stretch">
+                        <a class="nav-link-item">Carrier Air Conditioners</a>
+                        <a class="nav-link-item">Midea Air Conditioners</a>
+                        <a class="nav-link-item">Camipro Stabilizer</a>
+                        <a class="nav-link-item">Support</a>
+                        <a class="nav-link-item">Contact Us</a>
+                        <a class="nav-link-item">Videos</a>
+                        <a class="nav-link-item">Testimonials</a>
+                    </div>
+
+                    <!-- Cart + Wishlist always visible -->
+                  <!--   <div class="d-flex ms-auto">
+                        <div class="nav-cart">
+                            My Cart
+                            <!-- <div class="cart-badge">0</div> -->
+
+                         <!--    <img src="public/cart.png" alt="cart">
+                        </div>
+                        <div class="nav-wishlist">
+
+                            My Wishlist
+                            <img src="public/wishlist_m.png" alt="wishlist">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Mobile dropdown menu -->
+                 <!--<div class="mobile-menu" id="mobileMenu">
+                    <a href="#">Carrier Air Conditioners</a>
+                    <a href="#">Midea Air Conditioners</a>
+                    <a href="#">Camipro Stabilizer</a>
+                    <a href="#">Support</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Videos</a>
+                    <a href="#">Testimonials</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!--HERO BANNER -->
+
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    
+</body>
+
+</html>

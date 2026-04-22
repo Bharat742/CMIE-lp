@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrier AC Product Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <style>
+        :root {
+            --carrier-blue: #1681c4;
+            --carrier-dark: #124d82;
+            --carrier-red: #e31837;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        /* Top Banner */
+        .top-banner {
+            background-color: #f0f8ff;
+            color: var(--carrier-blue);
+            font-size: 12px;
+            font-weight: bold;
+            padding: 5px 0;
+        }
+        /* Navbar Links */
+        .nav-main {
+            background-color: var(--carrier-blue);
+        }
+        .nav-main a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            font-size: 13px;
+        }
+        .nav-main a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        .nav-right-actions {
+            background-color: var(--carrier-dark);
+            display: flex;
+        }
+        /* Search Bar */
+        .search-bar-container {
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        .search-bar-container input, .search-bar-container select {
+            border: none;
+            outline: none;
+            padding: 8px 15px;
+        }
+        .search-bar-container select {
+            background-color: #f9f9f9;
+            border-right: 1px solid #ddd;
+            width: 180px;
+            color: #555;
+        }
+        .search-bar-container input {
+            flex-grow: 1;
+        }
+        /* Sticky Header Bar */
+        .sticky-prod-header {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .discount-badge {
+            background-color: var(--carrier-red);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        /* Main Image & Thumbnails */
+        .thumbnail-img {
+            border: 1px solid #eee;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            width: 60px;
+            cursor: pointer;
+        }
+        .thumbnail-img.active {
+            border: 2px solid var(--carrier-blue);
+        }
+        .main-image-container {
+            position: relative;
+            background-color: #fbfbfb;
+            border: 1px solid #f0f0f0;
+            padding: 40px;
+            text-align: center;
+        }
+        .ribbon-yellow {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            background-color: #ffeb00;
+            color: black;
+            font-weight: bold;
+            padding: 5px 25px 5px 15px;
+            border-radius: 0 15px 15px 0;
+            font-size: 13px;
+        }
+        .off-text-blue {
+            position: absolute;
+            top: 55px;
+            left: 15px;
+            color: var(--carrier-blue);
+            font-weight: bold;
+        }
+        .image-icons {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #888;
+            font-size: 18px;
+        }
+        .image-icons i {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        /* Feature Icons */
+        .feature-icon-box {
+            text-align: center;
+            width: 60px;
+            margin-right: 15px;
+            font-size: 11px;
+        }
+        .feature-icon-box img {
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid #eee;
+            margin-bottom: 5px;
+        }
+        /* Offers & Availability */
+        .dotted-box {
+            border: 1px dashed var(--carrier-red);
+            border-radius: 5px;
+            padding: 10px;
+            color: #333;
+        }
+        .blue-offer-box {
+            background-color: #2b60a3;
+            color: white;
+            border-radius: 6px;
+            padding: 12px;
+            font-size: 12px;
+            height: 100%;
+        }
+        .gold-warranty-box {
+            background: linear-gradient(to right, #ffd700, #ff8c00);
+            border-radius: 8px;
+            padding: 20px;
+            color: #000;
+            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .btn-check-avail {
+            background-color: #2b60a3;
+            color: white;
+        }
+        .star-rating {
+            color: #ffb400;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-banner text-center">
+        Now delivering to more locations - check your Pincode and shop with ease!
+    </div>
+
+    <header class="container py-3 d-flex align-items-center justify-content-between">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Carrier_Corporation_logo.svg/2560px-Carrier_Corporation_logo.svg.png" alt="Carrier Logo" height="30">
+        </div>
+        
+        <div class="search-bar-container">
+            <select>
+                <option><i class="fa-solid fa-location-dot"></i> Search your location</option>
+            </select>
+            <input type="text" placeholder="Search your product...">
+            <button class="btn btn-link text-muted"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <div class="account-link">
+            <a href="#" class="text-dark text-decoration-none fw-bold">My Account <i class="fa-regular fa-user"></i></a>
+        </div>
+    </header>
+
+    <nav class="nav-main d-flex justify-content-between">
+        <div class="nav-links ms-4">
+            <a href="#">Carrier Air Conditioners</a>
+            <a href="#">Midea Air Conditioners</a>
+            <a href="#">Carrier Stabilizer</a>
+            <a href="#">Support</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Videos</a>
+            <a href="#">Testimonials</a>
+        </div>
+        <div class="nav-right-actions pe-4">
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i> My Cart <span class="badge bg-warning text-dark rounded-circle ms-1">1</span></a>
+            <a href="#"><i class="fa-regular fa-heart"></i> My Wishlist</a>
+        </div>
+    </nav>
+
+    <div class="sticky-prod-header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div style="font-size: 12px;">
+                <strong>Carrier 1.5 Ton 3 Star Wi-Fi Smart Flexicool Inverter Split AC</strong><br>
+                <span class="text-muted">SKU: CAI18EE3R35W0</span>
+            </div>
+            <div class="text-center">
+                <span class="fs-5 text-primary fw-bold">₹ 37,271</span>
+                <span class="text-decoration-line-through text-muted small mx-2">₹ 53,690</span>
+                <span class="fw-bold small">save ₹16,419</span>
+                <span class="discount-badge ms-2">31% OFF</span>
+            </div>
+            <div style="font-size: 10px;" class="text-muted text-center d-none d-md-block">
+                EMI starts at ₹1,598. No Cost EMI available <span class="text-success">EMI Options</span><br>
+                1 Year Comprehensive, 5 Years PCB & 10 Years on Compressor
+            </div>
+            <div>
+                <button class="btn btn-outline-primary btn-sm me-2 fw-bold">ADD TO CART</button>
+                <button class="btn btn-primary btn-sm fw-bold px-4">BUY NOW</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="container my-4">
+        <div class="row">
+            
+            <div class="col-lg-5 d-flex">
+                <div class="d-flex flex-column me-3">
+                    <img src="https://via.placeholder.com/60" class="thumbnail-img active" alt="Thumb">
+                    <img src="https://via.placeholder.com/60" class="thumbnail-img" alt="Thumb">
+                    <img src="https://via.placeholder.com/60" class="thumbnail-img" alt="Thumb">
+                    <img src="https://via.placeholder.com/60" class="thumbnail-img" alt="Thumb">
+                    <img src="https://via.placeholder.com/60" class="thumbnail-img" alt="Thumb">
+                    <img src="https://via.placeholder.com/60" class="thumbnail-img" alt="Thumb">
+                </div>
+                
+                <div class="main-image-container flex-grow-1">
+                    <div class="ribbon-yellow">2026 Model</div>
+                    <div class="off-text-blue">36% off</div>
+                    
+                    <div class="image-icons">
+                        <i class="fa-solid fa-vr-cardboard"></i>
+                        <i class="fa-solid fa-expand"></i>
+                    </div>
+                    
+                    <img src="https://m.media-amazon.com/images/I/41O7Z+1T+xL._SX342_SY445_.jpg" class="img-fluid mt-5" alt="Carrier AC">
+                </div>
+            </div>
+
+            <div class="col-lg-7 ps-lg-5">
+                <h4 class="fw-bold">Carrier 1.5 Ton 3 Star Wi-Fi Smart Flexicool Inverter Split AC (Copper, Convertible 6-in-1 Cooling,Smart Energy Display, HD & PM 2.5 Filter, ESTER EDGE FXI (Wi-Fi), CAI18EE3R35W0,White)</h4>
+                
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted small">SKU#: CAI18EE3R35W0</span>
+                    <div>
+                        <span class="fw-bold">4.2 (1653)</span>
+                        <span class="star-rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="text-success small fw-bold mb-3"><i class="fa-solid fa-circle" style="font-size: 8px;"></i> Currently in Stock</div>
+
+                <div class="d-flex mb-4">
+                    <div class="feature-icon-box"><img src="https://via.placeholder.com/60x60/003366/ffffff?text=6in1" alt="Icon"><br>6 Cooling Modes</div>
+                    <div class="feature-icon-box"><img src="https://via.placeholder.com/60x60/003366/ffffff?text=Auto" alt="Icon"><br>Auto Cleanser</div>
+                    <div class="feature-icon-box"><img src="https://via.placeholder.com/60x60/003366/ffffff?text=PM2.5" alt="Icon"><br>PM 2.5 Filter</div>
+                    <div class="feature-icon-box"><img src="https://via.placeholder.com/60x60/003366/ffffff?text=Guard" alt="Icon"><br>Prime Guard</div>
+                    <div class="feature-icon-box"><img src="https://via.placeholder.com/60x60/003366/ffffff?text=Wi-Fi" alt="Icon"><br>Wi-Fi AC version</div>
+                </div>
+
+                <div class="mb-3">
+                    <span class="fs-3 text-primary fw-bold">₹ 37,271</span>
+                    <span class="text-decoration-line-through text-muted fs-5 mx-2">₹ 53,690</span>
+                    <span class="fs-5 text-dark">save ₹16,419</span>
+                    <span class="discount-badge ms-2 fs-6 pb-1">31% OFF</span>
+                    <div class="text-muted small" style="font-size: 11px;">Inclusive of all taxes</div>
+                </div>
+
+                <div class="d-flex align-items-center mb-1">
+                    <h5 class="fw-bold m-0 me-3">Save up to ₹4,500*</h5>
+                    <button class="btn btn-primary fw-bold px-4 py-2" style="background-color: #2b60a3;">BUY TODAY</button>
+                </div>
+                <div class="text-muted small mb-4" style="font-size: 11px;">*(Extended warranty + Corporate Discount + Free Installation)</div>
+
+                <h6 class="fw-bold mb-2">Check Availability</h6>
+                <div class="d-flex mb-1" style="max-width: 300px;">
+                    <input type="text" class="form-control me-2" value="122001">
+                    <button class="btn btn-check-avail px-4">Apply</button>
+                </div>
+                <div class="text-success small mb-3"><i class="fa-regular fa-circle-check"></i> Product can be delivered to this pincode</div>
+
+                <div class="dotted-box mb-3">
+                    Free Delivery <strong>Tomorrow, 29th October, 7 am - 10 pm,</strong> Order within <strong class="text-success">3 Hrs 7 mins</strong>
+                </div>
+                <div class="text-muted small mb-4" style="font-size: 10px;">Installation & Demo* within 1 day of delivery <a href="#">*T&C's Apply</a></div>
+
+                <div class="small fw-bold mb-3">
+                    EMI starts at ₹1,598. No Cost EMI available <a href="#" class="text-success text-decoration-none">EMI Options <i class="fa-solid fa-angle-down"></i></a>
+                </div>
+
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <div class="blue-offer-box">
+                            <h6 class="fw-bold border-bottom border-light pb-2 mb-2">BANK OFFER</h6>
+                            <p class="mb-3">5% cashback on Min txn: 25K | Max up to ₹750</p>
+                            <a href="#" class="text-white text-decoration-none border-bottom">View all bank Offer →</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="blue-offer-box">
+                            <h6 class="fw-bold border-bottom border-light pb-2 mb-2">CORPORATE OFFER</h6>
+                            <p class="mb-3">₹1,500 instant discount if you sign up with your corporate id</p>
+                            <a href="#" class="text-white text-decoration-none border-bottom">View corporate Offer →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gold-warranty-box position-relative overflow-hidden">
+                    <h5 class="fw-bold mb-3">Extended Warranty offer<span class="text-danger">*</span> <span class="fs-6 fw-normal">(Valued ₹1,500)</span></h5>
+                    
+                    <div style="font-size: 12px; max-width: 80%;">
+                        <p class="mb-2"><strong>1 Year</strong> Comprehensive, <strong>5 Years</strong> PCB & <strong>10 Years</strong> on Compressor</p>
+                        <p class="text-danger fw-bold mb-1">Promotional Warranty <span class="fw-normal">(Limited Period Offer) :</span></p>
+                        <p class="mb-0"><strong>5 Years</strong> (Motors + Evaporator/Condenser Coil, Gas Charging in case of Evaporator/Condenser Coil/Compressor part replacement)</p>
+                    </div>
+                    
+                    <img src="https://via.placeholder.com/80x80/cc0000/ffffff?text=Warranty" class="position-absolute" style="right: 20px; bottom: 20px; border-radius: 50%; border: 2px solid white;" alt="Warranty Seal">
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> 
+</body>
+</html>
