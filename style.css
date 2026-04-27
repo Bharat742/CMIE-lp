@@ -1544,20 +1544,56 @@
             .sticky-left-col{position: relative;}
         }
         
-        @media (max-width:767px){
+        @media (max-width:767px){ 
+          .reviews-section{margin-top: 20px; border-bottom: 1px solid #ccc;}
+          .review-box-text{font-size: 11px; font-weight: 400; }
+          .btn-write-review{width: 140px; font-size: 12px; padding: 7px 15px; border-radius: 10px;}
+          .faq-accordion .accordion-body{font-size: 11px;}
+          .faq-accordion .accordion-button{font-size: 13px;}
+          .feature-card p{font-size: 12px;}
+          .feature-card, .feature-card img{margin-bottom: 10px;}
+          .feature-card h4{font-size: 18px; font-weight: 600;}
+          .custom-play-btn{height: 50px; width: 50px; font-size: 20px;}
+          .tab-section .custom-tab-content{padding: 10px 10px; text-align: left;}
+          .tab-section .custom-tabs .nav-link{font-weight: 400;padding: 10px 5px;}
+          .product-details .gold-warranty-box .years-text{font-size: 10px;}
+          .product-details .gold-warranty-box h5{font-size: 15px;}
+          .product-details .text-muted.small{margin-bottom: 10px !important;font-size: 10px; border-bottom: 1px solid #ccc; padding-bottom: 10px;}
+          .product-details .dotted-box{font-size: 12px; border-radius: 8px;}
+          .product-details .pin-text{font-size: 14px;}
+          .product-details .pin-code .btn-check-avail {padding: 3px 30px;}
+          .product-details .warrenty-line{font-size: 10px;}
+          .product-details .product-save .save-text{font-size: 15px;}
+          .product-details .product-save .save-btn{font-size: 12px; padding: 6px 25px;}
+          .product-details .features-card .features-list{margin: 0 0 10px 0;}
+          .product-details .features-card .read-more-btn{padding: 5px 15px; font-size: 11px;}
+          .product-details .features-card .features-list li{font-size: 12px;}
+          .product-details .features-card .features-title{font-size: 16px;}
+          .product-details .features-card{margin-bottom: 0px; margin-top: 10px; padding: 20px;}
+          .product-details .mobile-design{margin-bottom: 0 !important; padding-bottom: 10px;border-bottom: 1px solid #ccc;}
+          .product-details .main-price{border-bottom: unset; padding-bottom: 8px;}
+          .product-details .stock-check{margin-bottom: 0 !important;}
+          .m-mobile-rating { display: flex; align-items: center; gap: 10px; margin-bottom: 10px !important;}
+          .product-details .save-price{font-size: 14px;}
+          .product-details .cut-price{font-size: 16px;}
+          .product-details .product-price{font-size: 24px;}
+          .product-details .tax{font-size: 9px;}
+          .product-details .m-mobile .offer-price{display: none;}
+          .main-image-container .image-icons .vr-img2{width: 15px;}
+          .main-image-container .image-icons .vr-img{width: 20px;}
        .mobile-bar ul{list-style: none; padding: 8px 10px; flex-direction: row; display: flex;align-items: center;gap: 10px; margin: unset;}
     .mobile-bar li{font-size: 11px;}
     .mobile-bar{background-color:#2D3893 ; color: #fff;}
-    .mobile-bar ul li .btn{background-color: #FFF200;color: #000;border: unset; border-radius: 4px; font-size: 11px; padding: 4px 10px;}
+    .mobile-bar ul li .btn{background-color: #FFF200;color: #000;border: unset; border-radius: 7px; font-size: 11px; padding: 3px 15px;}
           .top-header{position: sticky;top: 0;z-index: 999999999999999;}
           .hamburger p{    margin-bottom: 0; font-size: 10px; margin-left: 10px; padding: 4px 0px;}
-          .sticky-prod-header .add-text p.d-flex{color: #000;}
-          .sticky-prod-header .add-text p{color: #4E4D4D;}
-          .product-details .blue-offer-box{padding: 10px;}
-          .product-details .product-title{font-size: 16px;}
-          .deals-title{font-size: 20px;}
+          .sticky-prod-header .add-text p.d-flex{color: #000; font-size: 14px;}
+          .sticky-prod-header .add-text p{color: #4E4D4D; font-size: 12px;}
+          .product-details .blue-offer-box{padding: 10px; display: flex; flex-direction: column; justify-content: space-evenly;}
+          .product-details .product-title{font-size: 15px;}
+          .deals-title{font-size: 17px; color: #000;}
           .card-title{font-size: 21px;}
-          .product-details .pin-code input{width: 180px;}
+          .product-details .pin-code input{width: 180px; padding: 3px 15px; font-size: 12px;}
           main.swiper-section{padding-top: 0px;}
           .swiper-section .ribbon-yellow{top: 8px;}
           .sticky-prod-header .add-text{padding-bottom: 5px; padding-right: unset;}
@@ -1577,7 +1613,7 @@
           .swiper-section .thumb-swiper-container{    height: auto;
     width: 100%;
      margin-right: 0px; padding-top: 10px; padding-bottom: 10px;}
-          .features-card-section{padding: 30px 0;}
+          .features-card-section{padding: 10px 0;}
           section{padding-top: 30px; padding-bottom: 30px;}
             .sticky-left-col{position: relative;}
             .product-details .gold-warranty-box{width: 100%;}
@@ -1757,7 +1793,7 @@
   .testimonial {
     padding: 30px 0px 10px !important;
 }
-.help-section{padding-bottom: 30px;padding-top: 30px;}
+.help-section{padding-bottom: 30px;padding-top: 0px;}
 #footerAccordion .accordion-body ul li{margin-bottom: 5px;}
 #footerAccordion .accordion-body{padding: 20px 0 0;}
 .app_icon img{width: 100px;
